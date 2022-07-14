@@ -21,6 +21,8 @@ const usersController = require('./controllers/users_controller')
 app.use('/users', usersController);
 const checklistsController = require('./controllers/checklists_controller')
 app.use('/checklists', checklistsController)
+const tasksController = require('./controllers/tasks_controller')
+app.use('/tasks', tasksController)
 
 // LISTEN
 app.listen(process.env.PORT, () => {
