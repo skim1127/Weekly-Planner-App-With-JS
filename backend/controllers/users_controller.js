@@ -17,7 +17,7 @@ users.get('/', async (req, res) => {
 // FIND A SPECIFIC USER
 users.get('/:id', async (req, res) => {
     try {
-        const foundUser = await Event.findOne({
+        const foundUser = await User.findOne({
             where: { user_id:req.params.id },
             include: [
                 {
