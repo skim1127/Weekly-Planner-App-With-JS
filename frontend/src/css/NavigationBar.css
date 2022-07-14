@@ -1,0 +1,9 @@
+.nav-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+
+}
+nav ul li {
+    list-style: none;
+}
