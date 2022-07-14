@@ -16,6 +16,12 @@ app.get('/', (req, res) => {
     })
 })
 
+// CONTROLLERS 
+const usersController = require('./controllers/users_controller')
+app.use('/users', usersController);
+const checklistsController = require('./controllers/checklists_controller')
+app.use('/checklists', checklistsController)
+
 // LISTEN
 app.listen(process.env.PORT, () => {
     console.log(`Listening on on port: ${process.env.PORT}`)
