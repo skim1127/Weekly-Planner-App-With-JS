@@ -1,6 +1,7 @@
 // DEPENDENCIES
 const users = require('express').Router();
 const db = require('../models')
+const bcrypt = require('bcrypt')
 const { User, Event, Checklist } = db
 
 
@@ -40,7 +41,13 @@ users.get('/:id', async (req, res) => {
 // CREATE A NEW USER
 users.post('/', async (req, res) => {
     try {
-        const newUser = await User.create(req.body)
+        console.log(req.body)
+        let password = req.body.user_pw;
+        const newUser = await User.create({
+            user_login_id: req.body.user_login_id,
+            user_name: req.body.user_name,
+            user_pw: await bcrypt.hash(password, 10)
+        })
         res.status(200).json({
             message: 'Successfully inserted a new user',
             data: newUser
