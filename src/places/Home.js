@@ -1,5 +1,9 @@
+// import modules
 import { Link } from "react-router-dom"
+import { CurrentUser } from "../contexts/CurrentUser"
+import { useContext, useState, useEffect } from "react"
 
+// import components/css
 import NavigationBar from "./NavigationBar"
 import DayOne from "./home/DayOne"
 import DayTwo from "./home/DayTwo"
@@ -10,7 +14,21 @@ import DaySix from "./home/DaySix"
 import DaySeven from "./home/DaySeven"
 import "../css/Home.css"
 
+
 export default function Home() {
+
+    const { currentUser } = useContext(CurrentUser);
+
+    const [eventData, setEventData] = useState([]);
+    useEffect(() => {
+        fetch(`https://invulnerable-chocolatine-75206.herokuapp.com/users/${currentUser.user_id}`)
+        .then(res => res.json())
+        .then(data => {
+            setEventData(data.events)
+            // console.log(data.events)
+        })
+    }, [])
+
     return(
         <div>
             <NavigationBar/>
@@ -25,13 +43,13 @@ export default function Home() {
                 <div className="fav-checklist">
                     <h1>Favorited Checklist</h1>
                 </div>
-                <DayOne/>
-                <DayTwo/>
-                <DayThree/>
-                <DayFour/>
-                <DayFive/>
-                <DaySix/>
-                <DaySeven/>
+                <DayOne data={eventData}/>
+                <DayTwo data={eventData}/>
+                <DayThree data={eventData}/>
+                <DayFour data={eventData}/>
+                <DayFive data={eventData}/>
+                <DaySix data={eventData}/>
+                <DaySeven data={eventData}/>
             </section>
         </div>
     )
