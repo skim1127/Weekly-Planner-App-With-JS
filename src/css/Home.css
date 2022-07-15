@@ -5,7 +5,9 @@
     margin-left: 10%;
     margin-right: 10%;
 }
-.main-content div {
+.main-content .day-container,
+.fav-checklist 
+{
     width: 24.5%;
     height: 40vh;
 }

@@ -14,7 +14,7 @@ export default function NavigationBar() {
         <Link to="/sign-up">Sign Up</Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
+        <Link to="/">Login</Link>
       </li>
     </div>
   )
@@ -30,7 +30,7 @@ export default function NavigationBar() {
     <nav>
       <ul className="nav-container">
         <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
         </li>
         <li>
             <Link to="/profile">My Profile</Link>
