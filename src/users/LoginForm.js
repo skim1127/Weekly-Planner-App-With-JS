@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
 import { useNavigate } from "react-router"
+import { Link } from 'react-router-dom'
 import { CurrentUser } from "../contexts/CurrentUser"
 
 function LoginForm() {
@@ -30,7 +31,7 @@ function LoginForm() {
 
         if (response.status === 200) {
             setCurrentUser(data.user)
-            navigate(`/`)
+            navigate(`/home`)
         } else {
             setErrorMessage(data.message)
         }
@@ -75,6 +76,7 @@ function LoginForm() {
                     </div>
                 </div>
                 <input className="btn btn-primary" type="submit" value="Login" />
+                <button className="sign-up-btn"><Link to="/sign-up">Sign-Up</Link></button>
             </form>
         </main>
     )

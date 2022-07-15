@@ -5,8 +5,10 @@ export default function DayThree() {
     const displayDate = GetDisplayDate(3)
 
     return(
-        <div>
-            <h1>{displayDate}</h1>
+        <div className="day-container">
+            <div className="display-date-container">
+                <h1>{displayDate}</h1>
+            </div>
         </div>
     )
 }

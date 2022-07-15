@@ -5,8 +5,10 @@ export default function DayOne() {
     const displayDate = GetDisplayDate(1)
 
     return(
-        <div>
-            <h1>{displayDate}</h1>
+        <div className="day-container">
+            <div className="display-date-container">
+                <h1>{displayDate}</h1>
+            </div>
         </div>
     )
 }

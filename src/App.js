@@ -7,6 +7,7 @@ import SignUpForm from './users/SignUpForm';
 import LoginForm from './users/LoginForm';
 import CurrentUserProvider from './contexts/CurrentUser'
 import Calendar from './places/Calendar';
+import NewEvent from './places/NewEvent';
 
 function App() {
   return (
@@ -15,10 +16,11 @@ function App() {
       <Router>
         <div className="display">
           <Routes>
-            <Route path="/" element={ <Home/> }/>
+            <Route path="/home" element={ <Home/> }/>
             <Route path="/sign-up" element={ <SignUpForm/> }/>
-            <Route path="/login" element={ <LoginForm/> }/>
-            <Route path="/calendar" element={ <Calendar/>}/>
+            <Route path="/" element={ <LoginForm/> }/>
+            <Route path="/calendar" element={ <Calendar/> }/>
+            <Route path="/events/new" element={ <NewEvent/> }/>
           </Routes>
         </div>
       </Router>
