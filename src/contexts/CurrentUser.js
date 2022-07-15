@@ -8,7 +8,7 @@ function CurrentUserProvider({ children }){
     const [currentUser, setCurrentUser] = useState(null)
     useEffect(() => {
         const getLoggedInUser = async () => {
-            let response = await fetch('http://localhost:5000/authentication/profile', {
+            let response = await fetch('https://invulnerable-chocolatine-75206.herokuapp.com/authentication/profile', {
                 credentials: 'include'
             })
             let user = await response.json()
