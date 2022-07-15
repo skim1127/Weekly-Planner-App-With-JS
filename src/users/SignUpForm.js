@@ -14,7 +14,7 @@ function SignUpForm() {
 	async function handleSubmit(e) {
 		e.preventDefault()
         console.log(user)
-		await fetch(`https://invulnerable-chocolatine-75206.herokuapp.com/users/`, {
+		await fetch(`http://invulnerable-chocolatine-75206.herokuapp.com/users/`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

@@ -17,7 +17,7 @@ function LoginForm() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch(`https://invulnerable-chocolatine-75206.herokuapp.com/authentication/`, {
+        const response = await fetch(`http://invulnerable-chocolatine-75206.herokuapp.com/authentication/`, {
             method: 'POST',
             credentials: 'include',
             headers: {
