@@ -1,6 +1,7 @@
 import "../css/Calendar.css"
 import "../css/Fonts.css"
-import {ChevronLeft, ChevronRight} from 'react-bootstrap-icons'
+import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons'
+import NavigationBar from "./NavigationBar";
 
 export default function Calendar() {
 
@@ -131,6 +132,7 @@ export default function Calendar() {
 
     return (
         <div>
+            <NavigationBar/>
             <div className="container">
                 <div className="calendar">
                     <div className="month">

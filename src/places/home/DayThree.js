@@ -1,5 +1,7 @@
 import GetDisplayDate from "../../functions/GetDisplayDate"
 import GetAmPm from '../../functions/GetAmPm';
+import {PencilSquare} from 'react-bootstrap-icons'
+import { Link } from 'react-router-dom'
 
 export default function DayThree(props) {
     const eventArray = []
@@ -33,8 +35,12 @@ export default function DayThree(props) {
         let itemEndDateString = itemEndDate.toDateString()
         // console.log(itemEndDate.getHours())
         let itemEndHour = GetAmPm(itemEndDate.getHours())
+
         return<div key={index} className="event-item">
-            <h4>{item.event_name}</h4>
+            <div>
+                <button><Link to={`/events/edit/${item.event_id}`}><PencilSquare/></Link></button>
+            </div>
+            <p className="event-item-title">{item.event_name}</p>
             <p>{`Starts: ${itemStartDateString} ${itemStartHour}`}</p>
             <p>{`Ends: ${itemEndDateString} ${itemEndHour}`}</p>
         </div>
