@@ -10,26 +10,8 @@ export default function Checklists() {
                 <ChecklistsSideBar/>
                 <section className="checklist-content">
                     <div>
-                        Checklist 1
-                        <button className="edit-checklist-btn">
-                            Edit Checklist
-                        </button>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>
-                                <input type="checkbox"/>
-                                Task 1
-                            </li>
-                            <li>
-                                <input type="checkbox"/>
-                                Task 2
-                            </li>
-                            <li>
-                                <input type="checkbox"/>
-                                Task 3
-                            </li>
-                        </ul>
+                        <h2>Click on an Existing Checklist,</h2>
+                        <h2>or Create a New Checklist.</h2>
                     </div>
                 </section>
             </div>

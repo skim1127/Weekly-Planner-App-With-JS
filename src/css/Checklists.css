@@ -3,12 +3,16 @@
     height: 100vh;
 }
 
-.checklists-container {
+.checklists-container,
+.task-form-container
+{
     display: flex;
 
 }
 
-.checklist-content {
+.checklist-content,
+.edit-task-form
+{
     width: 80%
 }
 

@@ -1,5 +1,6 @@
-import { useContext, useState } from 'react'
-import { CurrentUser } from '../contexts/CurrentUser'
+import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CurrentUser } from '../contexts/CurrentUser';
 import NavigationBar from './NavigationBar';
 
 export default function NewEvent() {
@@ -28,7 +29,6 @@ export default function NewEvent() {
     }  
 
     // POST Request
-
     const postData = () => {
         fetch('https://invulnerable-chocolatine-75206.herokuapp.com/events', options)
             .then(console.log(postBody))
@@ -68,7 +68,7 @@ export default function NewEvent() {
                         onChange={(e) => setEventEndDate(e.target.value)}/>
                     </li>
                 </ul>
-                <button onClick={postData} type="submit">Add It!</button>
+                <button onClick={postData} type="submit"><Link to="/home">Add It!</Link></button>
             </form>
         </div>
     )

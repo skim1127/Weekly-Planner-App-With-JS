@@ -2,8 +2,10 @@ import "../css/Calendar.css"
 import "../css/Fonts.css"
 import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons'
 import NavigationBar from "./NavigationBar";
+import { useContext, useState, useEffect } from 'react'
+import { CurrentUser } from "../contexts/CurrentUser";
 
-export default function Calendar() {
+export default function Calendar() { 
 
     // const renderCalendar = () => {
     //     date.setDate(1);
@@ -62,6 +64,7 @@ export default function Calendar() {
     //         return<div className="next-date" key={index}>{item}</div>
     //     })
     // }
+
     const date = new Date();
 
     date.setDate(1);
@@ -77,7 +80,7 @@ export default function Calendar() {
     const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
 
     const lastDays = 7 - lastDayIndex - 1
-    console.log(lastDays)
+    // console.log(lastDays)
 
     const months = [
         "January",
