@@ -8,6 +8,8 @@ import LoginForm from './users/LoginForm';
 import CurrentUserProvider from './contexts/CurrentUser'
 import Calendar from './places/Calendar';
 import NewEvent from './places/NewEvent';
+import EditEvent from './places/EditEvent';
+import Checklists from './places/Checklists';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/" element={ <LoginForm/> }/>
             <Route path="/calendar" element={ <Calendar/> }/>
             <Route path="/events/new" element={ <NewEvent/> }/>
+            <Route path="/events/edit/:id" element={ <EditEvent/> }/>
+            <Route path="/checklists" element={ <Checklists/> }/>
           </Routes>
         </div>
       </Router>
