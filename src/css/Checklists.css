@@ -1,0 +1,14 @@
+.checklists-side-bar {
+    width: 200px;
+    height: 100vh;
+}
+
+.checklists-container {
+    display: flex;
+
+}
+
+.checklist-content {
+    width: 80%
+}
+

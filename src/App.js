@@ -9,7 +9,8 @@ import CurrentUserProvider from './contexts/CurrentUser'
 import Calendar from './places/Calendar';
 import NewEvent from './places/NewEvent';
 import EditEvent from './places/EditEvent';
-import Checklists from './places/Checklists';
+import Checklists from './places/checklists/Checklists';
+import ChecklistDetails from './places/checklists/ChecklistDetails';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/events/new" element={ <NewEvent/> }/>
             <Route path="/events/edit/:id" element={ <EditEvent/> }/>
             <Route path="/checklists" element={ <Checklists/> }/>
+            <Route path="/checklists/:id" element={ <ChecklistDetails/> }/>
           </Routes>
         </div>
       </Router>
