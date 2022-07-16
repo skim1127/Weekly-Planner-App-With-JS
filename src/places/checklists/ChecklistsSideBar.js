@@ -33,6 +33,9 @@ export default function ChecklistsSideBar() {
             <div>
                 My Checklists
             </div>
+            <div>
+                <button><Link to="/checklists/new">New Checklist</Link></button>
+            </div>
             {checklistList}
         </aside>
     )

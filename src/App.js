@@ -11,6 +11,8 @@ import NewEvent from './places/NewEvent';
 import EditEvent from './places/EditEvent';
 import Checklists from './places/checklists/Checklists';
 import ChecklistDetails from './places/checklists/ChecklistDetails';
+import EditTask from './places/checklists/EditTask';
+import NewChecklist from './places/checklists/NewChecklist';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="/events/edit/:id" element={ <EditEvent/> }/>
             <Route path="/checklists" element={ <Checklists/> }/>
             <Route path="/checklists/:id" element={ <ChecklistDetails/> }/>
+            <Route path="/tasks/:id" element={ <EditTask/> }/>
+            <Route path="/checklists/new" element={ <NewChecklist/> }/>
           </Routes>
         </div>
       </Router>
