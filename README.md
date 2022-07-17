@@ -50,5 +50,5 @@ A 7-day planner with checklist functionalities
 ## Heroku Links
 - Link to Backend
 - https://invulnerable-chocolatine-75206.herokuapp.com/
-- Link to Frontend
+- Link to Frontend (Not functional atm)
 - https://abracadabrant-baguette-63042.herokuapp.com/
