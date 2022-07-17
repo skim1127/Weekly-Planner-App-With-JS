@@ -37,7 +37,7 @@ export default function NewEvent() {
     return(
         <div>
             <NavigationBar/>
-            <h3>Create New Event</h3>
+            <div className="new-event-header">Create New Event</div>
             <form id="new-event-form">
                 <ul>
                     <li>

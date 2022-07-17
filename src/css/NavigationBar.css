@@ -17,6 +17,7 @@ nav ul li a:visited,
 nav ul li a:active {
     color: rgb(255, 255, 255);
     text-decoration: none;
+    text-shadow: 1px 1px 1px darkblue;
 }
 
 nav ul li a:hover{
@@ -26,4 +27,9 @@ nav ul li a:hover{
 nav {
     background-color: rgb(65, 132, 255);
     height: 80px;
+    box-shadow: 3px 3px 3px darkblue;
+}
+
+.login-status {
+    text-shadow: 1px 1px 1px darkgray;
 }

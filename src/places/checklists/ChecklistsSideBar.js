@@ -30,7 +30,7 @@ export default function ChecklistsSideBar() {
 
     return(
         <aside className="checklists-side-bar">
-            <div>
+            <div className="side-bar-header">
                 My Checklists
             </div>
             <div>

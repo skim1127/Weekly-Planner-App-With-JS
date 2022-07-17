@@ -33,12 +33,12 @@ export default function DayOne(props) {
         let itemEndHour = GetAmPm(itemEndDate.getHours())
 
         return<div key={index} className="event-item">
-            <div>
+            <div className="event-item-title">
+                {item.event_name}
                 <button><Link to={`/events/edit/${item.event_id}`}><PencilSquare/></Link></button>
             </div>
-            <p className="event-item-title">{item.event_name}</p>
-            <p>{`Starts: ${itemStartDateString} ${itemStartHour}`}</p>
-            <p>{`Ends: ${itemEndDateString} ${itemEndHour}`}</p>
+            <p>{`Starts: ${itemStartDateString}, ${itemStartHour}`}</p>
+            <p>{`Ends: ${itemEndDateString}, ${itemEndHour}`}</p>
         </div>
 
     })
@@ -46,7 +46,7 @@ export default function DayOne(props) {
     return(
         <div className="day-container">
             <div className="display-date-container">
-                <h1>{displayDate}</h1>
+                {displayDate}
             </div>
             {eventItems}
         </div>

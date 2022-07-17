@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom"
 import { CurrentUser } from "../contexts/CurrentUser"
 import { useContext, useState, useEffect } from "react"
+import { CalendarPlus } from 'react-bootstrap-icons'
 
 // import components/css
 import NavigationBar from "./NavigationBar"
@@ -32,8 +33,8 @@ export default function Home() {
     return(
         <div>
             <NavigationBar/>
-            <header>
-                <h1>Weekly Planner</h1>
+            <header className="homepage-header">
+                <h1>{currentUser.user_name}'s Weekly Planner</h1>
             </header>
             <button className="new-event-btn">
                 <Link to="/events/new">Add New Event</Link>
@@ -41,7 +42,7 @@ export default function Home() {
             {/* Main content section for checklist & Planner */}
             <section className="main-content">
                 <div className="fav-checklist">
-                    <h1>Favorited Checklist</h1>
+                    <div className="fav-checklist-header">Favorited Checklist</div>
                 </div>
                 <DayOne data={eventData}/>
                 <DayTwo data={eventData}/>

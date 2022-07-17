@@ -1,7 +1,8 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect, useContext } from 'react'
 import NavigationBar from './NavigationBar';
-import { TrashFill } from 'react-bootstrap-icons'
+import { Trash } from 'react-bootstrap-icons'
+import "../css/EditEvent.css"
 
 export default function EditEvent() {
     const { id } = useParams();
@@ -64,7 +65,7 @@ export default function EditEvent() {
     return(
         <div>
             <NavigationBar/>
-            <h3>Edit Event</h3>        
+            <div className="edit-event-header">Edit Event</div>        
             <form id="edit-event-form">
                 <ul>
                     <li>
@@ -102,7 +103,7 @@ export default function EditEvent() {
                     <Link to="/home">Edit It!</Link>
                 </button>
                 <button onClick={deleteData}>
-                    <Link to="/home"><TrashFill/> Delete It!</Link>
+                    <Link to="/home"><Trash/> Delete It!</Link>
                 </button>
             </form>
         </div>

@@ -1,0 +1,58 @@
+#edit-event-form,
+#new-event-form
+{
+    border: 2px solid white;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 20px;
+    background-color: darkgray;
+    box-shadow: 3px 3px 3px rgb(65, 132, 255);
+}
+
+#edit-event-form li,
+#new-event-form li
+{
+    list-style: none;
+    margin: 10px 0px;
+    font-weight: 700;
+}
+
+#edit-event-form button,
+#new-event-form button
+{
+    margin-bottom: 10px;
+    margin-right: 5px;
+    height: 35px;
+    border-color: rgb(65, 132, 255);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px darkgray;
+    
+}
+
+#edit-event-form button a,
+#new-event-form button a
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: medium;
+    text-decoration: none;
+}
+
+#edit-event-form button:hover,
+#new-event-form button:hover
+{
+    background-color: darkgray;
+}
+
+.edit-event-header,
+.new-event-header
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 2px 2px rgb(168, 197, 252);
+}

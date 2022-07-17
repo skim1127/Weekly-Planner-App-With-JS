@@ -4,18 +4,85 @@
     justify-content: space-between;
     margin-left: 10%;
     margin-right: 10%;
+    font-family: 'Ubuntu', sans-serif;;
 }
+
+/* 8 containers */
 .main-content .day-container,
 .fav-checklist 
 {
-    width: 24.5%;
+    width: 24%;
     height: 40vh;
 }
 
-header {
+.homepage-header {
     text-align: center;
+    text-shadow: 2px 2px 2px rgb(168, 197, 252);
 }
 
-section div {
-    border: 1px solid darkgray
+.fav-checklist,
+.day-container
+{
+    border: 1px solid darkgray;
+    border-radius: 20px;
+    margin: 3px;
+    box-shadow: 3px 3px 3px rgb(15, 36, 126);
+    overflow-y:auto;
+}
+
+.new-event-btn {
+    height: 40px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 3px darkgray;
+    border-color: rgb(65, 132, 255);
+    border-radius: 10px;
+}
+
+.new-event-btn:hover {
+    background-color: darkgray;
+}
+
+.new-event-btn a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: medium;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.display-date-container {
+    background-color: rgb(65, 132, 255);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    color: aliceblue;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgb(44, 44, 44);
+}
+.fav-checklist-header {
+    background-color: rgb(27, 179, 52);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    color: aliceblue;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgb(44, 44, 44);
+}
+.event-item {
+    border: 1px solid darkgray;
+    font-size: 13px;
+}
+.event-item-title {
+    margin-top: 10px
+}
+
+.event-item-title button {
+    margin-left: 10px;
 }
