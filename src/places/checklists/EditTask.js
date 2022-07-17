@@ -74,13 +74,15 @@ export default function TaskDetails() {
             <div className="task-form-container">
                 <ChecklistsSideBar/>
                 <form className="edit-task-form">
-                    <header>Editing Task: {taskData.task_name}</header>
+                    <div className="edit-task-header">Editing Task: {taskData.task_name}</div>
                     <input 
                     type="checkbox"
+                    className="edit-task-checkbox"
                     onClick={SetTrueFalse}
                     defaultValue={taskChecked}
                     />
                     <input
+                    className="edit-task-name"
                     type="text"
                     onChange={(e) => setTaskName(e.target.value)}
                     defaultValue={taskName}

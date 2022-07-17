@@ -48,8 +48,8 @@ export default function NewChecklist() {
             <div className="checklists-container">
                 <ChecklistsSideBar/>
                 <form className="checklist-content">
-                    <header>Create New Checklist</header>
-                    <div>
+                    <div className="new-checklist-header">Create New Checklist</div>
+                    <div className="new-checklist-item">
                         <label htmlFor="checklist-name">Checklist Name: </label>
                         <input 
                         type="text"
@@ -59,7 +59,7 @@ export default function NewChecklist() {
                         required
                         />
                     </div>
-                    <div>
+                    <div className="new-checklist-item">
                         <label htmlFor="checklist-favorited">Save as favorite checklist?</label>
                         <input
                         type="checkbox"
@@ -69,7 +69,7 @@ export default function NewChecklist() {
                         name="checklist-favorited"
                         />
                     </div>
-                    <button onClick={postData} type="submit"><Link to="/checklists">Submit</Link></button>
+                    <button onClick={postData} type="submit"><Link to="/checklists">Add It!</Link></button>
                 </form>
             </div>
         </div>

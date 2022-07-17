@@ -75,8 +75,8 @@ export default function() {
             <div className="checklists-container">
                 <ChecklistsSideBar/>
                 <form className="checklist-content">
-                    <header>Edit Checklist</header>
-                    <div>
+                <div className="edit-checklist-header">Edit Checklist</div>
+                    <div className="edit-checklist-item">
                         <label htmlFor="checklist-name">Checklist Name: </label>
                         <input
                         type="text"
@@ -85,7 +85,7 @@ export default function() {
                         required
                         />
                     </div>
-                    <div>
+                    <div className="edit-checklist-item">
                         <label htmlFor="checklist-favorited">Save as favorite checklist?</label>
                         <input
                         type="checkbox"

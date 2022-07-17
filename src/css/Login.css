@@ -1,0 +1,72 @@
+main {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1621606453029-5656bd7fa6c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=691&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-header,
+.sign-up-header
+{
+    padding-top: 20px;
+    font-size: 35px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgb(168, 197, 252);    
+}
+
+.login-header
+{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;    
+    text-shadow: 1px 1px 1px rgb(168, 197, 252);    
+}
+
+.login-input,
+.sign-up-input
+{
+    margin-top: 10px;
+}
+
+.login-input label,
+.sign-up-input label
+{
+    font-weight: 700;
+}
+
+.login-input input,
+.sign-up-input input
+{
+    box-shadow: 1px 1px 1px darkgray;
+}
+
+.login-btn,
+.sign-up-btn {
+    height: 40px;
+    margin: 10px;
+    box-shadow: 3px 3px 3px darkgray;
+    border-color: rgb(65, 132, 255);
+    border-radius: 10px;
+}
+
+.login-btn:hover,
+.sign-up-btn:hover
+{
+    cursor: pointer;
+    background-color: darkgray;    
+}
+
+.login-btn,
+.sign-up-btn a,
+.sign-up-btn 
+{
+    font-weight: 700;
+    font-size: medium;
+    text-decoration: none;
+}
+
+
+

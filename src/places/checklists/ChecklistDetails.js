@@ -65,15 +65,15 @@ export default function() {
 
         // IF task_checked is true, return a checked checkbox.
         if (item.task_checked == true) {
-            return<form key={index}>
-                <input type="checkbox" checked/>
-                <input type="text" defaultValue={item.task_name}/>
+            return<form className="task-item" key={index}>
+                <input className="task-checkbox" type="checkbox" checked/>
+                <input className="task-name" type="text" defaultValue={item.task_name}/>
                 <button className="edit-btn"><Link to={`/tasks/${item.task_id}`}><PencilSquare/></Link></button>
             </form>
         } else {
-            return<form key={index}>
-                <input type="checkbox"/>
-                <input type="text" defaultValue={item.task_name}/>
+            return<form className="task-item" key={index}>
+                <input className="task-checkbox" type="checkbox"/>
+                <input className="task-name" type="text" defaultValue={item.task_name}/>
                 <button className="edit-btn"><Link to={`/tasks/${item.task_id}`}><PencilSquare/></Link></button>
             </form>
         }
@@ -85,7 +85,7 @@ export default function() {
                 <ChecklistsSideBar/>
                 <section className="checklist-content">
                     <div className="checklist-title">
-                        {checklistData.checklist_name}
+                        <div className="checklist-name">{checklistData.checklist_name}</div>
                         <button><Link to={`/checklists/edit/${id}`}>Edit Checklist <PencilSquare/></Link></button>
                     </div>
                     <form onSubmit={postData} className="add-new-task">

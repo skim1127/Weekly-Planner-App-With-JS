@@ -33,9 +33,6 @@ export default function NavigationBar() {
             <Link to="/home">Home</Link>
         </li>
         <li>
-            <Link to="/profile">My Profile</Link>
-        </li>
-        <li>
             <Link to="/calendar">30-Day Calendar</Link>
         </li>
         <li>

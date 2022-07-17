@@ -19,6 +19,11 @@
     font-weight: 700;
 }
 
+#edit-event-form input,
+#new-event-form input
+{
+    box-shadow: 1px 1px 1px white;
+}
 #edit-event-form button,
 #new-event-form button
 {

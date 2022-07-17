@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import { useNavigate } from "react-router"
 import { Link } from 'react-router-dom'
 import { CurrentUser } from "../contexts/CurrentUser"
+import "../css/Login.css"
 
 function LoginForm() {
 
@@ -40,7 +41,8 @@ function LoginForm() {
 
     return (
         <main>
-            <h1>Login</h1>
+            <div className="main-header">Weekly-Planner Application</div>
+            <div className="login-header">Login</div>
             {errorMessage !== null
                 ? (
                     <div className="alert alert-danger" role="alert">
@@ -51,8 +53,8 @@ function LoginForm() {
             }
             <form onSubmit={handleSubmit}>
                 <div className="row">
-                    <div className="col-sm-6 form-group">
-                        <label htmlFor="user_login_id">Login ID</label>
+                    <div className="login-input col-sm-6 form-group">
+                        <label htmlFor="user_login_id">Login ID: </label>
                         <input
                             required
                             value={credentials.user_login_id}
@@ -62,8 +64,8 @@ function LoginForm() {
                             name="user_login_id"
                         />
                     </div>
-                    <div className="col-sm-6 form-group">
-                        <label htmlFor="user_pw">Password</label>
+                    <div className="login-input col-sm-6 form-group">
+                        <label htmlFor="user_pw">Password: </label>
                         <input
                             type="password"
                             required
@@ -75,7 +77,7 @@ function LoginForm() {
                         />
                     </div>
                 </div>
-                <input className="btn btn-primary" type="submit" value="Login" />
+                <input className="login-btn btn btn-primary" type="submit" value="Login" />
                 <button className="sign-up-btn"><Link to="/sign-up">Sign-Up</Link></button>
             </form>
         </main>

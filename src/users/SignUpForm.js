@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router"
+import "../css/Login.css"
 
 function SignUpForm() {
 
@@ -27,11 +28,11 @@ function SignUpForm() {
 
 	return (
 		<main>
-			<h1>Sign Up</h1>
+			<div className="sign-up-header">Sign Up</div>
 			<form onSubmit={handleSubmit}>
-				<div className="row">
+				<div className="sign-up-input row">
 					<div className="col-sm-6 form-group">
-						<label htmlFor="userName">Display Name</label>
+						<label htmlFor="userName">Display Name: </label>
 						<input
 							required
 							value={user.user_name}
@@ -43,8 +44,8 @@ function SignUpForm() {
 					</div>
 				</div>
 				<div className="row">
-					<div className="col-sm-6 form-group">
-						<label htmlFor="loginId">Login ID</label>
+					<div className="sign-up-input col-sm-6 form-group">
+						<label htmlFor="loginId">Login ID: </label>
 						<input
 							required
 							value={user.user_login_id}
@@ -54,8 +55,8 @@ function SignUpForm() {
 							name="loginId"
 						/>
 					</div>
-                    <div className="col-sm-6 form-group">
-                        <label htmlFor="password">Password</label>
+                    <div className="sign-up-input col-sm-6 form-group">
+                        <label htmlFor="password">Password: </label>
                         <input
                             type="password"
                             required
@@ -67,7 +68,7 @@ function SignUpForm() {
                         />
                     </div>
 				</div>
-				<input className="btn btn-primary" type="submit" value="Sign Up" />
+				<input className="sign-up-btn btn btn-primary" type="submit" value="Sign Up" />
 			</form>
 		</main>
 	)

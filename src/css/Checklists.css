@@ -1,13 +1,17 @@
 .checklists-side-bar {
     width: 200px;
     height: 100vh;
+    background-color: rgb(27, 179, 52);
+    margin-top: 3px;
+    box-shadow: 3px 3px 3px darkgreen;
+    overflow-y:auto;
 }
 
 .checklists-container,
 .task-form-container
 {
     display: flex;
-
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .checklist-content,
@@ -16,3 +20,171 @@
     width: 80%
 }
 
+.side-bar-header {
+    margin-top: 3px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 2px darkgreen;
+    text-decoration: underline;
+}
+
+.checklists-side-bar button {
+    margin-bottom: 10px;
+    margin-right: 5px;
+    height: 35px;
+    border-color: rgb(65, 132, 255);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px darkgray;    
+}
+
+.checklists-side-bar button a {
+    font-weight: 700;
+    font-size: medium;
+    text-decoration: none;    
+}
+
+.checklists-side-bar button:hover {
+    background-color: darkgray;    
+}
+
+.checklist-link {
+    border-top: solid 3px darkgreen;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.checklist-link a{
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px darkgreen;
+}
+
+.checklist-link a:hover {
+    color: yellow;
+}
+
+.checklist-content h2 {
+    font-size: 35px;
+    text-shadow: 3px 3px 3px rgb(168, 197, 252);
+}
+
+.checklist-title {
+    margin-top: 20px;
+}
+
+.checklist-name {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 3px rgb(168, 197, 252);
+}
+
+.checklist-title button {
+    margin-bottom: 10px;
+    height: 35px;
+    border-color: rgb(65, 132, 255);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px darkgray;
+}
+
+.checklist-title button a {
+    font-weight: 700;
+    font-size: medium;
+    text-decoration: none;    
+}
+
+.checklist-title button:hover {
+    background-color: darkgray;    
+}
+
+.add-new-task {
+    margin-bottom: 10px;
+}
+
+.add-new-task input {
+    height: 20px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 1px darkgray;
+}
+
+.add-new-task button {
+    height: 25px;
+    width: 25px;
+    box-shadow: 1px 1px 1px darkgray;
+}
+
+.add-new-task button:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.task-item {
+    margin-bottom: 5px;
+}
+
+.task-name,
+.edit-task-name
+{
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 1px darkgray;    
+}
+
+a {
+    color: black
+}
+
+.edit-btn a:visited {
+    color:inherit
+}
+
+.edit-btn:hover {
+    background-color: darkgray;
+}
+
+.new-checklist-header,
+.edit-checklist-header,
+.edit-task-header
+{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;    
+    text-shadow: 2px 2px 2px rgb(168, 197, 252);
+}
+
+.new-checklist-item,
+.edit-checklist-item
+{
+    margin-bottom: 5px;
+}
+
+.checklist-content button,
+.edit-task-form button
+{
+    height: 35px;
+    border-color: rgb(65, 132, 255);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px darkgray;
+    margin-right: 5px;
+    margin-left: 5px;    
+}
+
+.checklist-content button a,
+.edit-task-form button a
+{
+    font-weight: 700;
+    font-size: medium;
+    text-decoration: none;    
+}
+
+.checklist-content button:hover, 
+.edit-task-form button:hover
+{
+    background-color: darkgray;
+}
