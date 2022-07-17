@@ -39,9 +39,16 @@ A 7-day planner with checklist functionalities
 - Checklist task doesn't update properly
 - New Checklist is not added dynamically
 - Favorited Checklist not working
+- Front-end not working in Heroku deployment.
 
 ## POST-MVP Plans
 - Nested checklists(checklist within a checklist)
 - Automatically add events/tasks when user specifies it is a weekly/daily occurence
 - Show today's weather on the homepage when logged in.
 - Desktop notifications/reminders
+
+## Heroku Links
+- Link to Backend
+- https://invulnerable-chocolatine-75206.herokuapp.com/
+- Link to Frontend
+- https://abracadabrant-baguette-63042.herokuapp.com/
