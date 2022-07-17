@@ -93,7 +93,7 @@ export default function() {
                         type="text"
                         onChange={(e) => setTaskName(e.target.value)} 
                         placeholder="Add a new Task"/>
-                        <button type="submit">+</button>
+                        <button className="plus-btn" type="submit">+</button>
                     </form>
                     <div>
                         {tasksList}

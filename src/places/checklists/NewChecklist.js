@@ -9,7 +9,7 @@ export default function NewChecklist() {
 
     // State variables for checklist Data
     const [checklistName, setChecklistName] = useState(null);
-    const [checklistFav, setChecklistFav] = useState(null);
+    const [checklistFav, setChecklistFav] = useState(false);
 
     // Data Body for POST Request
     const postBody = {
@@ -59,7 +59,7 @@ export default function NewChecklist() {
                         required
                         />
                     </div>
-                    <div className="new-checklist-item">
+                    {/* <div className="new-checklist-item">
                         <label htmlFor="checklist-favorited">Save as favorite checklist?</label>
                         <input
                         type="checkbox"
@@ -68,7 +68,7 @@ export default function NewChecklist() {
                         id="checklist-favorited"
                         name="checklist-favorited"
                         />
-                    </div>
+                    </div> */}
                     <button onClick={postData} type="submit"><Link to="/checklists">Add It!</Link></button>
                 </form>
             </div>

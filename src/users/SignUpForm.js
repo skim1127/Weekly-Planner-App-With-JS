@@ -23,13 +23,13 @@ function SignUpForm() {
 			body: JSON.stringify(user)
 		})
 
-		// navigate(`/`)
+		navigate(`/`)
 	}
 
 	return (
 		<main>
 			<div className="sign-up-header">Sign Up</div>
-			<form onSubmit={handleSubmit}>
+			<form>
 				<div className="sign-up-input row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="userName">Display Name: </label>
@@ -68,7 +68,7 @@ function SignUpForm() {
                         />
                     </div>
 				</div>
-				<input className="sign-up-btn btn btn-primary" type="submit" value="Sign Up" />
+				<input onClick={handleSubmit} className="sign-up-btn btn btn-primary" type="submit" value="Sign Up" />
 			</form>
 		</main>
 	)

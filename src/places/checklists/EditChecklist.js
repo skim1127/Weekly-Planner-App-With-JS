@@ -10,7 +10,7 @@ export default function() {
     // State variables for checklist data
     const [checklistData, setChecklistData] = useState([]);
     const [checklistName, setChecklistName] = useState(null);
-    const [checklistFav, setChecklistFav] = useState(null);
+    const [checklistFav, setChecklistFav] = useState(false);
 
     // Get specified Checklist Data
     useEffect(() => {
@@ -85,7 +85,7 @@ export default function() {
                         required
                         />
                     </div>
-                    <div className="edit-checklist-item">
+                    {/* <div className="edit-checklist-item">
                         <label htmlFor="checklist-favorited">Save as favorite checklist?</label>
                         <input
                         type="checkbox"
@@ -94,7 +94,7 @@ export default function() {
                         id="checklist-favorited"
                         name="checklist-favorited"
                         />   
-                    </div>     
+                    </div>      */}
                     <button onClick={putData}><Link to="/checklists">Edit it!</Link></button>
                     <button onClick={deleteData}><Link to="/checklists"><Trash/></Link></button>            
                 </form>
