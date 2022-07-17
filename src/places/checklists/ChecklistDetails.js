@@ -84,7 +84,10 @@ export default function() {
             <div className="checklists-container">
                 <ChecklistsSideBar/>
                 <section className="checklist-content">
-                    <div className="checklist-title">{checklistData.checklist_name}</div>
+                    <div className="checklist-title">
+                        {checklistData.checklist_name}
+                        <button><Link to={`/checklists/edit/${id}`}>Edit Checklist <PencilSquare/></Link></button>
+                    </div>
                     <form onSubmit={postData} className="add-new-task">
                         <input 
                         type="text"

@@ -13,6 +13,7 @@ import Checklists from './places/checklists/Checklists';
 import ChecklistDetails from './places/checklists/ChecklistDetails';
 import EditTask from './places/checklists/EditTask';
 import NewChecklist from './places/checklists/NewChecklist';
+import EditChecklist from './places/checklists/EditChecklist';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/checklists/:id" element={ <ChecklistDetails/> }/>
             <Route path="/tasks/:id" element={ <EditTask/> }/>
             <Route path="/checklists/new" element={ <NewChecklist/> }/>
+            <Route path="/checklists/edit/:id" element={ <EditChecklist/> }/>
           </Routes>
         </div>
       </Router>

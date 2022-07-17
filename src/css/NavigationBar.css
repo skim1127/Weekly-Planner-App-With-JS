@@ -2,8 +2,28 @@
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
-
+    margin: 0;
+    padding-top: 30px;
 }
+
 nav ul li {
     list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+nav ul li a,
+nav ul li a:visited, 
+nav ul li a:active {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+nav {
+    background-color: rgb(65, 132, 255);
+    height: 80px;
 }

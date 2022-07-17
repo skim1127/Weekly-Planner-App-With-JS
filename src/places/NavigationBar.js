@@ -22,7 +22,7 @@ export default function NavigationBar() {
   if (currentUser) {
     loginActions = (
       <li className="login-status">
-        Logged in as { currentUser.user_name }
+        Logged in as: { currentUser.user_name }
       </li>
     )
   }
