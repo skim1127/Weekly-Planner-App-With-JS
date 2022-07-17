@@ -41,6 +41,95 @@ A 7-day planner with checklist functionalities
 - Favorited Checklist not working
 - Front-end not working in Heroku deployment.
 
+## Application Logic
+### [Back End Logic]
+- The application API is deployed on Heroku, connected to a Postgres Database using Heroku Postgres.
+- I used Sequelize-CLI to create Models & Migrations that define table columns & relationships.
+- I made use of useContext to keep tracke of the user that's logged in, so that I can use the user_id to query for user specific data to render on the frontend.
+- My main use of the controllers were to interact with the database for basic CRUD operations.
+- The authentication controller handles the back-end logic for verifying User Login ID & Password, as well as checking if there is a user that is already logged in (session management) with cookies.
+### [Front End Logic]
+- Landing Page(Login Page) "/"
+```
+It made the most sense to make the landing page the login page, 
+as the Weekly Planner App needs to display everything based on the user that's logged in.
+Once users input data into the login form, it sends a request to the backend and checks 
+if the user login id exists, and also checks if the hashed password matches the one inside 
+the database. If credentials are correct, users are sent to their homepage.
+```
+- Sign up Page "/sign-up"
+```
+Users can click on the sign up button in the landing page to come to the sign-up page. 
+Once users input data into the sign up form, it sends a POST request to the backend and 
+creates a new user. The user is then sent back to the login page.
+```
+- User Home Page "/home"
+```
+On load, the homepage uses a useEffect hook & a fetch request to grab event data related 
+to the logged in user using useContext. That data is then passed into its child components,
+which checks the database for any events that have the same date as itself, then displays the
+event(s) if the date matches.
+```
+- Add New Event Page "/events/new"
+```
+Users can click on the "Add New Event" button on the homepage to come to the new event page.
+Once users input data into the event form, it sends a POST request to the backend and creates
+a new event. If the event start date matches any of the dates in the homepage, it will display 
+accordingly.
+```
+- Edit Event Page "/events/edit/:id"
+```
+Users can click on the edit button on an existing event to come to the edit event page.
+Once users input data into the form, it sends a PUT request to the backend and updates the
+specified event. If the user clicks the delete button, it sends a DELETE request to the backend
+and the event is deleted.
+```
+- Checklists Page "/checklists"
+```
+Users can come here by clicking on "My Checklists" link on the Navigation Bar. It prompts the user
+to click on any existing checklists or create a new checklist using the button.
+```
+- Add New Checklist Page "/checklists/new"
+```
+Users can come here by clicking on "+ New Checklist" button on the side bar of the checklists page.
+Once users input data into the form, it sends a POST request to the backend and creates a new checklist.
+```
+- Checklist Details Page "checklists/:id"
+```
+Users can come here by clicking on any existing checklist on the side bar of the checklists page.
+On load, it sends a GET request to the backend to grab checklist data based on the logged in user
+and grabs all the tasks based on the checklist_id. It then displays any tasks that the checklist has.
+Users can also add a new task by typing it in the input and submitting it by pressing enter or clicking
+the "+" button.
+```
+- Edit Checklist Page "/checklists/edit/:id"
+```
+Users can come here by clicking on "Edit Checklist" button on any checklist details page.
+Once users input data into the form, it sends a PUT request to the backend and updates the checklist.
+If users click on the delete button, it sends a DELETE request and the checklist is deleted.
+```
+- Edit Task Page "/tasks/:id"
+```
+Users can come here by clicking on the edit button on any existing task.
+Once users input data into the form, it sends a PUT request to the backend and updates the task.
+If users click on the delete button, it sends a DELETE request and the task is deleted.
+```
+- Navigation Bar
+```
+The navigation bar displays available links that users can click on. Utilizes the <Link> component
+from react-router-dom. "Home" takes the user back to their homepage, "30-day Calendar" takes the 
+user to a calendar page, and "My Checklists" takes the user to their checklists page. It also shows 
+the logged in user's display name using useContext.
+```
+- Checklists Side Bar
+```
+The Checklists Side bar is only displayed when the user is on any checklist-related page.
+It contains a button that takes the user to a form to create a new checklist, and contains any
+existing checklists related to the logged in user. On load, it sends a GET request based on the
+logged in user and grabs all the related checklist data. For every checklist the user has, it renders
+a <Link> component that takes the user to the specific checklist details page.
+```
+ 
 ## POST-MVP Plans
 - Nested checklists(checklist within a checklist)
 - Automatically add events/tasks when user specifies it is a weekly/daily occurence
